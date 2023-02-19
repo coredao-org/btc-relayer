@@ -1,0 +1,43 @@
+{
+  "cross_chain_config": {
+    "recursion_height": 10
+  },
+  "btc_config": {
+    "rpc_addrs": [
+      {"host": "btc_rpc_address", "user": "user", "pass": "pwd"}
+    ],
+    "sleep_second": 1,
+    "data_seed_deny_service_threshold": 60
+  },
+  "core_config": {
+    "private_key": "core_privateKey",
+    "providers": [
+      "core_rpcaddress"
+    ],
+    "gas_limit": 4700000,
+    "gas_increase": 1000000,
+    "gas_price": 1000000000,
+    "sleep_second": 1,
+    "data_seed_deny_service_threshold": 60
+  },
+  "log_config": {
+    "level": "DEBUG",
+    "filename": "relay.log",
+    "max_file_size_in_mb": 500,
+    "max_backups_of_log_files": 10,
+    "max_age_to_retain_log_files_in_days": 0,
+    "use_console_logger": false,
+    "use_file_logger": true,
+    "compress": false
+  },
+  "alert_config": {
+    "enable_alert": false,
+    "enable_heart_beat": false,
+    "interval": 300,
+    "identity": "your_service_name",
+    "telegram_bot_id": "your_telegram_bot_id",
+    "telegram_chat_id": "your_telegram_chat_id",
+    "balance_threshold": "1000000000000000000",
+    "sequence_gap_threshold": 10
+  }
+}
